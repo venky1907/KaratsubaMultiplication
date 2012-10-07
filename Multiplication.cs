@@ -18,10 +18,10 @@ namespace KaratsubaMultiplication
             {
               
 
-                if (number1 == 0 || number2 == 0)
-                {
-                    return 0;
-                }
+                //if (number1 == 0 || number2 == 0)
+                //{
+                //    return 0;
+                //}
                 val++;
                 return (number1 * number2);
             }
@@ -43,10 +43,24 @@ namespace KaratsubaMultiplication
             d = Math.Truncate(d);
 
 
-            double total = (Math.Pow(10, no_of_digits) * Karatsuba(a, c, no_of_digits / 2))
-                + (Math.Pow(10, no_of_digits / 2) * (Karatsuba(a, d, no_of_digits / 2) + Karatsuba(b, c, no_of_digits / 2)))
+            double val1 = (Karatsuba(a, c, no_of_digits / 2));
 
-              + (Karatsuba(b, d, no_of_digits / 2));
+
+            double val3 = (Karatsuba(b, d, no_of_digits / 2));
+
+
+            double val2 = (Karatsuba ((a + b) , (c + d),no_of_digits / 2)) - val1 - val3;
+
+            //val = val + 2;
+            double total = Math.Pow(10, no_of_digits) * val1 + Math.Pow(10, no_of_digits / 2) * val2 + val3;
+            
+            //(Math.Pow(10, no_of_digits / 2) * (Karatsuba(a, d, no_of_digits / 2) + Karatsuba(b, c, no_of_digits / 2)));
+
+
+            //double total = (Math.Pow(10, no_of_digits) * Karatsuba(a, c, no_of_digits / 2))
+            //    + (Math.Pow(10, no_of_digits / 2) * (Karatsuba(a, d, no_of_digits / 2) + Karatsuba(b, c, no_of_digits / 2)))
+
+            //  + (Karatsuba(b, d, no_of_digits / 2));
 
 
        
