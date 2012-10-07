@@ -16,6 +16,13 @@ namespace KaratsubaMultiplication
             Console.WriteLine(String.Format("The number is {0} and {1}", number1, number2));
             if ( no_of_digits == 1) 
             {
+              
+
+                if (number1 == 0 || number2 == 0)
+                {
+                    return 0;
+                }
+                val++;
                 return (number1 * number2);
             }
 

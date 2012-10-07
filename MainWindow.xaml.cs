@@ -33,6 +33,7 @@ namespace KaratsubaMultiplication
             Multiplication mul = new Multiplication();
            double vaa=  mul.Karatsuba(123, 456, 4);
 
+           Console.WriteLine("No of Single Digit multiplications is " + mul.val);
           //Till not the karastsuba multiplication is working fine but finer analysis is required for core understanding 
 
           //
